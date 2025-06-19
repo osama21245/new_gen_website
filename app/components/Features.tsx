@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { useLanguage } from '../providers'
-import { Code, Users, Building, Rocket, CheckCircle, Star } from 'lucide-react'
+import { Code, Users, Building, Rocket, Star } from 'lucide-react'
 
 export function Features() {
   const { t } = useLanguage()
@@ -32,13 +32,6 @@ export function Features() {
       color: 'text-orange-600',
       bgColor: 'bg-orange-100 dark:bg-orange-900/20'
     }
-  ]
-
-  const stats = [
-    { number: '5000+', label: 'Students Trained' },
-    { number: '98%', label: 'Job Placement Rate' },
-    { number: '4.9', label: 'Average Rating' },
-    { number: '100+', label: 'Partner Companies' }
   ]
 
   return (

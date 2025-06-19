@@ -2,7 +2,7 @@
 
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { useLanguage } from '../providers'
-import { Code, Sparkles, Zap, Target, Rocket, Shield, Brain, Lock, Play, Heart, Star, ShoppingBag, User, Settings } from 'lucide-react'
+import { Code, Sparkles, Zap, Target, Shield, Brain, Lock, Play, Heart, Star, ShoppingBag, User, Settings } from 'lucide-react'
 import { useRef, useState } from 'react'
 
 // Interactive Flutter IDE Component
