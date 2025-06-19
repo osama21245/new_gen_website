@@ -23,16 +23,12 @@ import {
   Award,
   TrendingUp,
   Play,
-  Download,
   Brain,
   Palette,
-  Database,
-  Settings,
+
   Globe,
   Monitor,
-  FileText,
   MessageSquare,
-  Bot,
   Workflow
 } from 'lucide-react'
 import Image from 'next/image'
@@ -716,7 +712,7 @@ export default function CoursePage() {
                           {project.id === 1 && (
                             <div className="mt-6 glass rounded-2xl p-6">
                               <h6 className="text-xl font-bold text-center mb-6">
-                                <span className="lang-en">Technologies You'll Master in {project.level} ({project.name})</span>
+                                <span className="lang-en">Technologies You&apos;ll Master in {project.level} ({project.name})</span>
                                 <span className="lang-ar hidden">التقنيات اللي هتتعلمها في {project.level} ({project.nameAr})</span>
                               </h6>
                               
@@ -959,7 +955,7 @@ export default function CoursePage() {
           
           <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
             <span className="lang-en">
-              Beyond our academy projects, you'll collaborate with our partner companies on real applications 
+              Beyond our academy projects, you&apos;ll collaborate with our partner companies on real applications 
               that serve actual users and generate revenue.
             </span>
             <span className="lang-ar hidden">
@@ -1000,7 +996,7 @@ export default function CoursePage() {
             <div className="space-y-4">
               <div className="p-4 bg-purple-50 dark:bg-purple-900/20 rounded-xl border border-purple-200/50 dark:border-purple-800/50">
                 <h5 className="font-semibold text-purple-700 dark:text-purple-300 mb-2">
-                  <span className="lang-en">What You'll Work On:</span>
+                  <span className="lang-en">What You&apos;ll Work On:</span>
                   <span className="lang-ar hidden">إيه اللي هتشتغل عليه:</span>
                 </h5>
                 <ul className="space-y-2 text-sm text-purple-700 dark:text-purple-300">
@@ -1067,7 +1063,7 @@ export default function CoursePage() {
             <div className="space-y-4">
               <div className="p-4 bg-blue-50 dark:bg-blue-900/20 rounded-xl border border-blue-200/50 dark:border-blue-800/50">
                 <h5 className="font-semibold text-blue-700 dark:text-blue-300 mb-2">
-                  <span className="lang-en">AI Projects You'll Build:</span>
+                  <span className="lang-en">AI Projects You&apos;ll Build:</span>
                   <span className="lang-ar hidden">مشاريع الذكاء الاصطناعي اللي هتبنيها:</span>
                 </h5>
                 <ul className="space-y-2 text-sm text-blue-700 dark:text-blue-300">
@@ -1134,7 +1130,7 @@ export default function CoursePage() {
             <div className="space-y-4">
               <div className="p-4 bg-green-50 dark:bg-green-900/20 rounded-xl border border-green-200/50 dark:border-green-800/50">
                 <h5 className="font-semibold text-green-700 dark:text-green-300 mb-2">
-                  <span className="lang-en">Features You'll Develop:</span>
+                  <span className="lang-en">Features You&apos;ll Develop:</span>
                   <span className="lang-ar hidden">المميزات اللي هتطورها:</span>
                 </h5>
                 <ul className="space-y-2 text-sm text-green-700 dark:text-green-300">
@@ -1155,8 +1151,8 @@ export default function CoursePage() {
                   <li className="flex items-start gap-2">
                     <Rocket className="w-4 h-4 mt-0.5 flex-shrink-0" />
                     <span>
-                      <span className="lang-en">"Find Your Hero KAMN" personalized experience</span>
-                      <span className="lang-ar hidden">تجربة "اكتشف البطل KAMN" الشخصية</span>
+                      <span className="lang-en">&ldquo;Find Your Hero KAMN&rdquo; personalized experience</span>
+                      <span className="lang-ar hidden">تجربة &ldquo;اكتشف البطل KAMN&rdquo; الشخصية</span>
                     </span>
                   </li>
                 </ul>
@@ -1407,7 +1403,7 @@ export default function CoursePage() {
                   <div className="flex items-center gap-3 mb-2">
                     <BookOpen className="w-5 h-5 text-blue-500" />
                     <span className="font-semibold">
-                      <span className="lang-en">Don't have these skills?</span>
+                      <span className="lang-en">Don&apos;t have these skills?</span>
                       <span className="lang-ar hidden">مش عندك المهارات دي؟</span>
                     </span>
                   </div>
@@ -1443,7 +1439,7 @@ export default function CoursePage() {
                 
                 <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
                   <span className="lang-en">
-                    What you'll achieve after completing our comprehensive Flutter training program.
+                    What you&apos;ll achieve after completing our comprehensive Flutter training program.
                   </span>
                   <span className="lang-ar hidden" dir="rtl">
                     إيه اللي هتحققه بعد ما تخلص برنامج التدريب الشامل بتاعنا.

@@ -11,7 +11,6 @@ export function VideoHero() {
   const [videoError, setVideoError] = useState(false)
   const [loadingProgress, setLoadingProgress] = useState(0)
   const [useVideo, setUseVideo] = useState(true)
-  const [userInteracted, setUserInteracted] = useState(false)
   const [isPlaying, setIsPlaying] = useState(false)
   const videoRef = useRef<HTMLVideoElement>(null)
   const { language, t } = useLanguage()
@@ -19,7 +18,6 @@ export function VideoHero() {
   // Handle user interaction to enable autoplay
   useEffect(() => {
     const handleUserInteraction = () => {
-      setUserInteracted(true)
       const video = videoRef.current
       if (video && video.paused && useVideo && !videoError) {
         video.play().catch((error) => {
@@ -112,7 +110,8 @@ export function VideoHero() {
       const handlePause = () => setIsPlaying(false)
 
       // Network speed detection - fallback to background if slow
-      const connectionSpeed = (navigator as any)?.connection?.effectiveType
+      const connection = (navigator as Navigator & { connection?: { effectiveType?: string } }).connection
+      const connectionSpeed = connection?.effectiveType
       if (connectionSpeed === 'slow-2g' || connectionSpeed === '2g') {
         console.log('Slow connection detected, using background fallback')
         setUseVideo(false)
@@ -172,6 +171,7 @@ export function VideoHero() {
     <section className="relative h-screen w-full overflow-hidden">
       {/* Video Background */}
       <div className="absolute inset-0 z-0">
+        {/* Video */}
         {useVideo && !videoError ? (
           <>
             <video
