@@ -435,29 +435,6 @@ function AboutVideoSection() {
 export default function About() {
   const { language } = useLanguage()
 
-  const stats = [
-    { 
-      number: '15+', 
-      label: { en: 'Partner Companies', ar: 'شركة شريكة' },
-      icon: Building2 
-    },
-    { 
-      number: '500+', 
-      label: { en: 'Future Developers', ar: 'مطور مستقبلي' },
-      icon: Users 
-    },
-    { 
-      number: '95%', 
-      label: { en: 'Target Placement Rate', ar: 'معدل التوظيف المستهدف' },
-      icon: Award 
-    },
-    { 
-      number: '3+', 
-      label: { en: 'Years Vision', ar: 'سنوات رؤية' },
-      icon: Star 
-    }
-  ]
-
   const values = [
     {
       icon: Target,
@@ -590,17 +567,6 @@ export default function About() {
                 }
               </p>
             </motion.div>
-          </motion.div>
-
-          {/* Stats Section */}
-          <motion.div
-            className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-20"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6, duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-       
           </motion.div>
 
           {/* Values Section */}

@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { useLanguage } from '../providers'
-import { Rocket, Shield, Users, ArrowRight, CheckCircle } from 'lucide-react'
+import { Rocket, Shield, ArrowRight, CheckCircle } from 'lucide-react'
 
 export function CTA() {
   const { t } = useLanguage()
@@ -147,7 +147,7 @@ export function CTA() {
                     40% OFF
                   </motion.div>
                 </div>
-                <p className="text-purple-200 text-xl font-semibold">Limited Time Offer - Don't Miss Out!</p>
+                <p className="text-purple-200 text-xl font-semibold">Limited Time Offer - Don&apos;t Miss Out!</p>
               </motion.div>
 
               {/* Benefits */}

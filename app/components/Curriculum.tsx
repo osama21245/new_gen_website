@@ -225,10 +225,10 @@ export function Curriculum() {
         >
           <div className="text-center mb-12">
             <h3 className="text-2xl md:text-3xl font-bold mb-4 gradient-text">
-              Complete Skill Set You'll Master
+              Complete Skill Set You&apos;ll Master
             </h3>
             <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-              By the end of our course, you'll have hands-on experience with all the essential Flutter development skills.
+              By the end of our course, you&apos;ll have hands-on experience with all the essential Flutter development skills.
             </p>
           </div>
 
