@@ -10,7 +10,7 @@ export function Footer() {
 
   const quickLinks = [
     { key: 'nav.home', href: '/' },
-    { key: 'nav.courses', href: '/course-content' },
+    { key: 'nav.courses', href: '/courses' },
     { key: 'nav.about', href: '/about' },
     { key: 'nav.contact', href: '#contact' },
   ]
