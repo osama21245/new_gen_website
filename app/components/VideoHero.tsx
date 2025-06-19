@@ -486,30 +486,13 @@ export function VideoHero() {
               </motion.div>
 
               <motion.a
-                href="/courses#projects-section"
+                href="/courses"
                 className="px-8 py-4 bg-white/20 backdrop-blur-sm text-white rounded-lg font-semibold text-lg hover:bg-white/30 transition-all duration-300 flex items-center justify-center gap-3 border border-white/30"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={(e) => {
                   e.preventDefault()
-                  // Navigate to courses page and scroll to projects section
                   router.push('/courses')
-                  setTimeout(() => {
-                    const projectsSection = document.getElementById('projects-section')
-                    if (projectsSection) {
-                      projectsSection.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'center'
-                      })
-                    } else {
-                      // Fallback: scroll to middle of page
-                      const middleOfPage = document.documentElement.scrollHeight / 2
-                      window.scrollTo({
-                        top: middleOfPage,
-                        behavior: 'smooth'
-                      })
-                    }
-                  }, 500)
                 }}
               >
                 <Info className="w-5 h-5" />
