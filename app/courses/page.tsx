@@ -298,7 +298,7 @@ export default function CoursePage() {
       </section>
 
       {/* What Will You Build Section */}
-      <section className="py-20 relative overflow-hidden">
+      <section id="projects-section" className="py-20 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-white to-purple-50 dark:from-gray-800 dark:via-gray-900 dark:to-purple-900/20" />
         
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

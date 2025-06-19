@@ -46,7 +46,7 @@ export const Partners = () => {
         ar: 'شركة رائدة في خدمات التوصيل تقدم حلول توصيل سريعة وموثوقة وفعالة في جميع أنحاء المنطقة، تربط الشركات بعملائها من خلال الخدمات اللوجستية السلسة.'
       },
       color: 'from-orange-500 to-orange-600',
-      link: '#'
+      link: 'https://www.facebook.com/profile.php?id=61577574869604&mibextid=ZbWKwL'
     }
   ];
 
