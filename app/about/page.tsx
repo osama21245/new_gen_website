@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 import { Header } from '../components/Header'
 import { Footer } from '../components/Footer'
 import { useLanguage } from '../providers'
-import { Target, Users, Building2, Award, Globe, Heart, Star, CheckCircle, ArrowRight, Play, Pause } from 'lucide-react'
+import { Target, Users, Building2, Globe, Heart, CheckCircle, ArrowRight, Play, Pause } from 'lucide-react'
 import { useState, useRef, useEffect } from 'react'
 
 // Custom About Video Section Component - Inspired by Home but Unique
