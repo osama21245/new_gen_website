@@ -22,7 +22,6 @@ import {
   BookOpen,
   Award,
   TrendingUp,
-  Play,
   Brain,
   Palette,
 
