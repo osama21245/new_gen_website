@@ -15,6 +15,7 @@ function AboutVideoSection() {
   const [videoError, setVideoError] = useState(false)
   const [isPlaying, setIsPlaying] = useState(false)
   const [showOverlay, setShowOverlay] = useState(true)
+  const [userChangedMute, setUserChangedMute] = useState(false)
   const videoRef = useRef<HTMLVideoElement>(null)
 
   useEffect(() => {
@@ -24,8 +25,11 @@ function AboutVideoSection() {
       const handleLoadedMetadata = () => {
         console.log('Video metadata loaded - showing video')
         setIsLoaded(true)
-        video.muted = true
-        setIsMuted(true)
+        // Only set muted if user hasn't manually changed it
+        if (!userChangedMute) {
+          video.muted = true
+          setIsMuted(true)
+        }
       }
 
       // Start playing when we have enough data (progressive loading)
@@ -60,8 +64,11 @@ function AboutVideoSection() {
           if (bufferedEnd >= 2 && !isLoaded) {
             console.log('Enough buffered - showing video')
             setIsLoaded(true)
-            video.muted = true
-            setIsMuted(true)
+            // Only set muted if user hasn't manually changed it
+            if (!userChangedMute) {
+              video.muted = true
+              setIsMuted(true)
+            }
           }
         }
       }
@@ -106,13 +113,14 @@ function AboutVideoSection() {
         clearTimeout(fallbackTimer)
       }
     }
-  }, [])
+  }, [userChangedMute])
 
   const toggleMute = () => {
     if (videoRef.current) {
       const newMutedState = !videoRef.current.muted
       videoRef.current.muted = newMutedState
       setIsMuted(newMutedState)
+      setUserChangedMute(true) // Mark that user has manually changed mute state
     }
   }
 
