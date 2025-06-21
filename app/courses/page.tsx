@@ -215,87 +215,7 @@ export default function CoursePage() {
     <main className="min-h-screen">
       <Header />
       
-      {/* Hero Section */}
-      <section className="pt-32 pb-20 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-purple-50 via-white to-blue-50 dark:from-gray-900 dark:via-purple-900/20 dark:to-gray-900" />
-        
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <motion.div
-              className="inline-flex items-center px-6 py-3 rounded-full glass-strong mb-8"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-            >
-              <BookOpen className="w-6 h-6 mr-3 text-purple-600" />
-              <span className="font-semibold">{t('courses.badge')}</span>
-            </motion.div>
-
-            <motion.h1
-              className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2, duration: 0.6 }}
-            >
-              <span className="gradient-text">{t('courses.title')}</span>
-            </motion.h1>
-
-            <motion.div
-              className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto text-left"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4, duration: 0.6 }}
-            >
-              {/* English */}
-              <div className="glass-strong rounded-2xl p-8">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center">
-                    <span className="text-white font-bold text-sm">EN</span>
-                  </div>
-                  <h3 className="text-xl font-bold">{t('courses.englishTitle')}</h3>
-                </div>
-                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                  {t('courses.englishDesc')}
-                </p>
-              </div>
-
-              {/* Arabic */}
-              <div className="glass-strong rounded-2xl p-8">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
-                    <span className="text-white font-bold text-sm">AR</span>
-                  </div>
-                  <h3 className="text-xl font-bold">{t('courses.arabicTitle')}</h3>
-                </div>
-                <p className="text-gray-600 dark:text-gray-300 leading-relaxed" dir="rtl">
-                  {t('courses.arabicDesc')}
-                </p>
-              </div>
-            </motion.div>
-
-            <motion.div
-              className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-8"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.6, duration: 0.6 }}
-            >
-              <motion.a
-                href="https://wa.me/201031559635?text=Hello! I want to know more about the Flutter Mastery Course"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-2xl font-bold text-lg hover:shadow-2xl hover:shadow-purple-500/50 transition-all duration-300 flex items-center gap-3"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <Play className="w-5 h-5" />
-                {t('courses.startLearning')}
-              </motion.a>
-
-            
-            </motion.div>
-          </div>
-        </div>
-      </section>
+    
 
       {/* What Will You Build Section */}
       <section id="projects-section" className="py-20 relative overflow-hidden">
@@ -317,11 +237,11 @@ export default function CoursePage() {
               <span className="font-semibold">{t('courses.levelsTitle')}</span>
             </motion.div>
             
-            <h2 className="text-3xl md:text-5xl font-bold mb-6 gradient-text">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 gradient-text">
               {t('courses.levelsSubtitle')}
             </h2>
             
-            <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+            <p className="text-base md:text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto px-4">
               {t('courses.levelsDesc')}
             </p>
           </motion.div>
@@ -334,14 +254,14 @@ export default function CoursePage() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <div className="grid md:grid-cols-2 gap-8 mb-8">
-              <div className="glass-strong rounded-2xl p-8">
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-500 rounded-xl flex items-center justify-center">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 mb-8">
+              <div className="glass-strong rounded-2xl p-6 md:p-8">
+                <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-6">
+                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-500 rounded-xl flex items-center justify-center flex-shrink-0">
                     <Building className="w-6 h-6 text-white" />
                   </div>
-                  <div>
-                    <h3 className="text-2xl font-bold">{t('courses.academyProjectsTitle')}</h3>
+                  <div className="flex-1">
+                    <h3 className="text-xl md:text-2xl font-bold">{t('courses.academyProjectsTitle')}</h3>
                     <p className="text-sm text-purple-600 font-semibold">
                       {t('courses.academyProjectsSubtitle')}
                     </p>
@@ -352,13 +272,13 @@ export default function CoursePage() {
                 </p>
               </div>
 
-              <div className="glass-strong rounded-2xl p-8">
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-xl flex items-center justify-center">
+              <div className="glass-strong rounded-2xl p-6 md:p-8">
+                <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-6">
+                  <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-xl flex items-center justify-center flex-shrink-0">
                     <Users className="w-6 h-6 text-white" />
                   </div>
-                  <div>
-                    <h3 className="text-2xl font-bold">{t('courses.clientProjectsTitle')}</h3>
+                  <div className="flex-1">
+                    <h3 className="text-xl md:text-2xl font-bold">{t('courses.clientProjectsTitle')}</h3>
                     <p className="text-sm text-green-600 font-semibold">
                       {t('courses.clientProjectsSubtitle')}
                     </p>
@@ -396,11 +316,11 @@ export default function CoursePage() {
                     </div>
                   )}
 
-                  <div className="grid md:grid-cols-3 gap-6 items-start">
+                  <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8 items-start">
                     {/* Project Image & Info */}
-                    <div className="md:col-span-2">
+                    <div className="lg:col-span-2 order-2 lg:order-1">
                       {/* Project Image */}
-                      <div className="relative w-full h-48 mb-6 rounded-2xl overflow-hidden">
+                      <div className="relative w-full h-48 sm:h-56 md:h-64 mb-6 rounded-2xl overflow-hidden">
                         <Image
                           src={project.image}
                           alt={project.name}
@@ -425,11 +345,11 @@ export default function CoursePage() {
                         </div>
                       </div>
 
-                      <div className="flex items-center gap-4 mb-6">
-                        <div className={`w-16 h-16 bg-gradient-to-r ${project.color} rounded-2xl flex items-center justify-center`}>
+                      <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-6">
+                        <div className={`w-16 h-16 bg-gradient-to-r ${project.color} rounded-2xl flex items-center justify-center flex-shrink-0`}>
                           <IconComponent className="w-8 h-8 text-white" />
                         </div>
-                        <div>
+                        <div className="flex-1">
                           <p className="text-sm text-gray-600 dark:text-gray-400">
                             {language === 'ar' ? project.typeAr : project.type}
                           </p>
@@ -490,7 +410,7 @@ export default function CoursePage() {
                     </div>
 
                     {/* Skills */}
-                    <div className="space-y-4">
+                    <div className="space-y-4 order-1 lg:order-2">
                       <h4 className="font-semibold text-lg">
                         {t('courses.technologiesMaster')}
                       </h4>
@@ -522,28 +442,28 @@ export default function CoursePage() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              <div>
-                <div className="text-3xl font-bold gradient-text mb-2">100</div>
-                <div className="text-sm font-medium text-gray-600 dark:text-gray-300">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
+              <div className="text-center">
+                <div className="text-2xl sm:text-3xl font-bold gradient-text mb-2">100</div>
+                <div className="text-xs sm:text-sm font-medium text-gray-600 dark:text-gray-300">
                   {t('courses.trainingHours')}
                 </div>
               </div>
-              <div>
-                <div className="text-3xl font-bold gradient-text mb-2">20+</div>
-                <div className="text-sm font-medium text-gray-600 dark:text-gray-300">
+              <div className="text-center">
+                <div className="text-2xl sm:text-3xl font-bold gradient-text mb-2">20+</div>
+                <div className="text-xs sm:text-sm font-medium text-gray-600 dark:text-gray-300">
                   {t('courses.realProjects')}
                 </div>
               </div>
-              <div>
-                <div className="text-3xl font-bold gradient-text mb-2">15+</div>
-                <div className="text-sm font-medium text-gray-600 dark:text-gray-300">
+              <div className="text-center">
+                <div className="text-2xl sm:text-3xl font-bold gradient-text mb-2">15+</div>
+                <div className="text-xs sm:text-sm font-medium text-gray-600 dark:text-gray-300">
                   {t('courses.technologies')}
                 </div>
               </div>
-              <div>
-                <div className="text-3xl font-bold gradient-text mb-2">∞</div>
-                <div className="text-sm font-medium text-gray-600 dark:text-gray-300">
+              <div className="text-center">
+                <div className="text-2xl sm:text-3xl font-bold gradient-text mb-2">∞</div>
+                <div className="text-xs sm:text-sm font-medium text-gray-600 dark:text-gray-300">
                   {t('courses.careerGrowth')}
                 </div>
               </div>
@@ -569,7 +489,7 @@ export default function CoursePage() {
                 </span>
               </motion.div>
               
-              <h3 className="text-2xl md:text-3xl font-bold mb-4">
+              <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-4">
                 {t('courses.firstAppTitle')}
               </h3>
             </div>
@@ -592,25 +512,25 @@ export default function CoursePage() {
                     viewport={{ once: true }}
                   >
                     {/* Project Header */}
-                    <div className="flex items-center justify-between mb-6">
-                      <div className="flex items-center gap-4">
-                        <div className={`w-16 h-16 bg-gradient-to-r ${project.color} rounded-2xl flex items-center justify-center`}>
+                    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-6">
+                      <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 flex-1">
+                        <div className={`w-16 h-16 bg-gradient-to-r ${project.color} rounded-2xl flex items-center justify-center flex-shrink-0`}>
                           <IconComponent className="w-8 h-8 text-white" />
                         </div>
-                        <div>
-                          <div className="flex items-center gap-2 mb-1">
+                        <div className="flex-1 min-w-0">
+                          <div className="flex flex-wrap items-center gap-2 mb-1">
                             <span className="px-3 py-1 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 text-xs font-bold rounded-full">
                               {project.level}
                             </span>
                             <span className="text-sm font-semibold text-purple-600">{project.hours}h</span>
                             {project.isFirst && (
-                              <span className="px-3 py-1 bg-gradient-to-r from-purple-600 to-blue-600 text-white text-xs font-bold rounded-full">
-                                <Star className="w-3 h-3 mr-1 inline" />
+                              <span className="px-3 py-1 bg-gradient-to-r from-purple-600 to-blue-600 text-white text-xs font-bold rounded-full flex items-center">
+                                <Star className="w-3 h-3 mr-1" />
                                 {t('courses.firstProject')}
                               </span>
                             )}
                           </div>
-                          <h4 className="text-2xl font-bold">
+                          <h4 className="text-xl sm:text-2xl font-bold mb-1">
                             {language === 'ar' ? project.nameAr : project.name}
                           </h4>
                           <p className="text-sm text-gray-600 dark:text-gray-400">
@@ -621,7 +541,7 @@ export default function CoursePage() {
                       
                       <motion.button
                         onClick={() => setExpandedProject(isExpanded ? null : project.id)}
-                        className="px-4 py-2 bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 rounded-lg font-semibold hover:bg-purple-200 dark:hover:bg-purple-900/50 transition-all duration-300"
+                        className="px-4 py-2 bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 rounded-lg font-semibold hover:bg-purple-200 dark:hover:bg-purple-900/50 transition-all duration-300 self-start sm:self-center"
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                       >
@@ -646,7 +566,7 @@ export default function CoursePage() {
                     >
                       {isExpanded && (
                         <div className="space-y-6 pt-6 border-t border-gray-200/50 dark:border-gray-700/50">
-                          <div className="grid md:grid-cols-2 gap-8">
+                          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
                             {/* English Details */}
                             <div className="glass rounded-2xl p-6">
                               <div className="flex items-center gap-3 mb-4">
@@ -716,7 +636,7 @@ export default function CoursePage() {
                                 <span className="lang-ar hidden">التقنيات اللي هتتعلمها في {project.level} ({project.nameAr})</span>
                               </h6>
                               
-                              <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4">
+                              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-3 md:gap-4">
                                 {[
                                   { name: 'Firebase', icon: '🔥', description: 'Backend & Database' },
                                   { name: 'n8n', icon: '⚡', description: 'Workflow Automation' },
@@ -729,13 +649,13 @@ export default function CoursePage() {
                                 ].map((tech, techIndex) => (
                                   <motion.div
                                     key={techIndex}
-                                    className="text-center p-4 bg-white/50 dark:bg-gray-800/50 rounded-xl border border-gray-200/50 dark:border-gray-700/50"
+                                    className="text-center p-3 md:p-4 bg-white/50 dark:bg-gray-800/50 rounded-xl border border-gray-200/50 dark:border-gray-700/50"
                                     whileHover={{ scale: 1.05, y: -5 }}
                                     transition={{ duration: 0.2 }}
                                   >
-                                    <div className="text-2xl mb-2">{tech.icon}</div>
-                                    <div className="font-semibold text-sm mb-1">{tech.name}</div>
-                                    <div className="text-xs text-gray-600 dark:text-gray-400">{tech.description}</div>
+                                    <div className="text-xl md:text-2xl mb-2">{tech.icon}</div>
+                                    <div className="font-semibold text-xs md:text-sm mb-1">{tech.name}</div>
+                                    <div className="text-xs text-gray-600 dark:text-gray-400 hidden sm:block">{tech.description}</div>
                                   </motion.div>
                                 ))}
                               </div>
@@ -770,29 +690,29 @@ export default function CoursePage() {
                 </span>
               </motion.div>
               
-              <h3 className="text-3xl md:text-4xl font-bold mb-4 gradient-text">
-                <span className="lang-en">From Beginner to Flutter Expert</span>
-                <span className="lang-ar hidden">من المبتدئ إلى خبير Flutter</span>
-              </h3>
-              
-              <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-                <span className="lang-en">
-                  Follow our structured 4-level progression. Each level builds on the previous one, 
-                  taking you from basic concepts to advanced enterprise-grade applications.
-                </span>
-                <span className="lang-ar hidden">
-                  اتبع التقدم المنظم من 4 مستويات. كل مستوى يبني على اللي قبله، 
-                  يوصلك من المفاهيم الأساسية لتطبيقات الشركات المتقدمة.
-                </span>
-              </p>
+                          <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 gradient-text">
+              <span className="lang-en">From Beginner to Flutter Expert</span>
+              <span className="lang-ar hidden">من المبتدئ إلى خبير Flutter</span>
+            </h3>
+            
+            <p className="text-base md:text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto px-4">
+              <span className="lang-en">
+                Follow our structured 4-level progression. Each level builds on the previous one, 
+                taking you from basic concepts to advanced enterprise-grade applications.
+              </span>
+              <span className="lang-ar hidden">
+                اتبع التقدم المنظم من 4 مستويات. كل مستوى يبني على اللي قبله، 
+                يوصلك من المفاهيم الأساسية لتطبيقات الشركات المتقدمة.
+              </span>
+            </p>
             </div>
 
             {/* Timeline */}
             <div className="relative">
-              {/* Timeline Line */}
-              <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-orange-500 via-purple-500 via-green-500 to-blue-500 rounded-full"></div>
+              {/* Timeline Line - hidden on mobile, shown on desktop */}
+              <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-orange-500 via-purple-500 via-green-500 to-blue-500 rounded-full"></div>
               
-              <div className="space-y-16">
+              <div className="space-y-8 lg:space-y-16">
                 {projects.map((project, index) => {
                   const IconComponent = project.icon
                   const isEven = index % 2 === 0
@@ -800,30 +720,30 @@ export default function CoursePage() {
                   return (
                     <motion.div
                       key={project.id}
-                      className={`flex items-center ${isEven ? 'flex-row' : 'flex-row-reverse'}`}
+                      className={`flex flex-col lg:flex-row items-center ${isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'}`}
                       initial={{ opacity: 0, x: isEven ? -50 : 50 }}
                       whileInView={{ opacity: 1, x: 0 }}
                       transition={{ delay: index * 0.2, duration: 0.6 }}
                       viewport={{ once: true }}
                     >
                       {/* Content */}
-                      <div className={`w-5/12 ${isEven ? 'text-right pr-8' : 'text-left pl-8'}`}>
+                      <div className={`w-full lg:w-5/12 ${isEven ? 'lg:text-right lg:pr-8' : 'lg:text-left lg:pl-8'} mb-4 lg:mb-0`}>
                         <motion.div
                           className="glass-strong rounded-2xl p-6 hover:glow transition-all duration-300"
                           whileHover={{ scale: 1.02 }}
                         >
-                          <div className={`flex items-center gap-3 mb-4 ${isEven ? 'flex-row-reverse' : ''}`}>
-                            <div className={`w-12 h-12 bg-gradient-to-r ${project.color} rounded-xl flex items-center justify-center`}>
+                          <div className={`flex flex-col sm:flex-row items-start sm:items-center gap-3 mb-4 ${isEven ? 'lg:flex-row-reverse' : ''}`}>
+                            <div className={`w-12 h-12 bg-gradient-to-r ${project.color} rounded-xl flex items-center justify-center flex-shrink-0`}>
                               <IconComponent className="w-6 h-6 text-white" />
                             </div>
-                            <div className={isEven ? 'text-right' : 'text-left'}>
-                              <div className="flex items-center gap-2 mb-1">
+                            <div className={`flex-1 ${isEven ? 'lg:text-right' : 'lg:text-left'}`}>
+                              <div className={`flex flex-wrap items-center gap-2 mb-1 ${isEven ? 'lg:justify-end' : 'lg:justify-start'}`}>
                                 <span className="px-3 py-1 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 text-xs font-bold rounded-full">
                                   {project.level}
                                 </span>
                                 <span className="text-sm font-semibold text-purple-600">{project.hours}h</span>
                               </div>
-                              <h4 className="text-xl font-bold">
+                              <h4 className="text-lg sm:text-xl font-bold">
                                 {language === 'ar' ? project.nameAr : project.name}
                               </h4>
                               <p className="text-sm text-gray-600 dark:text-gray-400">
@@ -872,8 +792,8 @@ export default function CoursePage() {
                         </motion.div>
                       </div>
                       
-                      {/* Empty space for alternating layout */}
-                      <div className="w-5/12"></div>
+                      {/* Empty space for alternating layout - hidden on mobile */}
+                      <div className="hidden lg:block lg:w-5/12"></div>
                     </motion.div>
                   )
                 })}
@@ -888,36 +808,36 @@ export default function CoursePage() {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <h4 className="text-2xl font-bold mb-6">
+              <h4 className="text-xl sm:text-2xl font-bold mb-6">
                 <span className="lang-en">Complete Journey Overview</span>
                 <span className="lang-ar hidden">نظرة عامة على الرحلة الكاملة</span>
               </h4>
               
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-                <div>
-                  <div className="text-3xl font-bold gradient-text mb-2">100h</div>
-                  <div className="text-sm font-medium text-gray-600 dark:text-gray-300">
+              <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+                <div className="text-center">
+                  <div className="text-2xl sm:text-3xl font-bold gradient-text mb-2">100h</div>
+                  <div className="text-xs sm:text-sm font-medium text-gray-600 dark:text-gray-300">
                     <span className="lang-en">Total Training</span>
                     <span className="lang-ar hidden">إجمالي التدريب</span>
                   </div>
                 </div>
-                <div>
-                  <div className="text-3xl font-bold gradient-text mb-2">20+</div>
-                  <div className="text-sm font-medium text-gray-600 dark:text-gray-300">
+                <div className="text-center">
+                  <div className="text-2xl sm:text-3xl font-bold gradient-text mb-2">20+</div>
+                  <div className="text-xs sm:text-sm font-medium text-gray-600 dark:text-gray-300">
                     <span className="lang-en">Real Projects</span>
                     <span className="lang-ar hidden">مشروع حقيقي</span>
                   </div>
                 </div>
-                <div>
-                  <div className="text-3xl font-bold gradient-text mb-2">25+</div>
-                  <div className="text-sm font-medium text-gray-600 dark:text-gray-300">
+                <div className="text-center">
+                  <div className="text-2xl sm:text-3xl font-bold gradient-text mb-2">25+</div>
+                  <div className="text-xs sm:text-sm font-medium text-gray-600 dark:text-gray-300">
                     <span className="lang-en">Technologies</span>
                     <span className="lang-ar hidden">تقنية</span>
                   </div>
                 </div>
-                <div>
-                  <div className="text-3xl font-bold gradient-text mb-2">$1K+</div>
-                  <div className="text-sm font-medium text-gray-600 dark:text-gray-300">
+                <div className="text-center">
+                  <div className="text-2xl sm:text-3xl font-bold gradient-text mb-2">$1K+</div>
+                  <div className="text-xs sm:text-sm font-medium text-gray-600 dark:text-gray-300">
                     <span className="lang-en">Revenue Potential</span>
                     <span className="lang-ar hidden">إمكانية الربح</span>
                   </div>
@@ -965,17 +885,17 @@ export default function CoursePage() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
           {/* Fassla - Software House */}
           <motion.div
-            className="glass-strong rounded-3xl p-8 hover:glow transition-all duration-300"
+            className="glass-strong rounded-3xl p-6 md:p-8 hover:glow transition-all duration-300"
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <div className="flex items-center gap-4 mb-6">
-              <div className="relative w-16 h-16 rounded-2xl overflow-hidden">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-6">
+              <div className="relative w-16 h-16 rounded-2xl overflow-hidden flex-shrink-0">
                 <Image
                   src="/images/fassla.jpg"
                   alt="Fassla Software"
@@ -984,8 +904,8 @@ export default function CoursePage() {
                   sizes="64px"
                 />
               </div>
-              <div>
-                <h4 className="text-2xl font-bold">Fassla Software</h4>
+              <div className="flex-1">
+                <h4 className="text-xl md:text-2xl font-bold">Fassla Software</h4>
                 <p className="text-sm text-purple-600 font-semibold">
                   <span className="lang-en">Software House Partner</span>
                   <span className="lang-ar hidden">شريك بيت البرمجيات</span>
@@ -1035,14 +955,14 @@ export default function CoursePage() {
 
           {/* ByteWave - AI Projects */}
           <motion.div
-            className="glass-strong rounded-3xl p-8 hover:glow transition-all duration-300"
+            className="glass-strong rounded-3xl p-6 md:p-8 hover:glow transition-all duration-300"
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <div className="flex items-center gap-4 mb-6">
-              <div className="relative w-16 h-16 rounded-2xl overflow-hidden">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-6">
+              <div className="relative w-16 h-16 rounded-2xl overflow-hidden flex-shrink-0">
                 <Image
                   src="/images/byteWaveLogo.png"
                   alt="ByteWave"
@@ -1051,8 +971,8 @@ export default function CoursePage() {
                   sizes="64px"
                 />
               </div>
-              <div>
-                <h4 className="text-2xl font-bold">ByteWave</h4>
+              <div className="flex-1">
+                <h4 className="text-xl md:text-2xl font-bold">ByteWave</h4>
                 <p className="text-sm text-blue-600 font-semibold">
                   <span className="lang-en">AI Solutions Partner</span>
                   <span className="lang-ar hidden">شريك حلول الذكاء الاصطناعي</span>
@@ -1102,14 +1022,14 @@ export default function CoursePage() {
 
           {/* Kamn - Sports App */}
           <motion.div
-            className="glass-strong rounded-3xl p-8 hover:glow transition-all duration-300"
+            className="glass-strong rounded-3xl p-6 md:p-8 hover:glow transition-all duration-300"
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.2, duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <div className="flex items-center gap-4 mb-6">
-              <div className="relative w-16 h-16 rounded-2xl overflow-hidden">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-6">
+              <div className="relative w-16 h-16 rounded-2xl overflow-hidden flex-shrink-0">
                 <Image
                   src="/images/kamn_new copy.jpg"
                   alt="Kamn Sports"
@@ -1118,8 +1038,8 @@ export default function CoursePage() {
                   sizes="64px"
                 />
               </div>
-              <div>
-                <h4 className="text-2xl font-bold">Kamn Sports</h4>
+              <div className="flex-1">
+                <h4 className="text-xl md:text-2xl font-bold">Kamn Sports</h4>
                 <p className="text-sm text-green-600 font-semibold">
                   <span className="lang-en">Product-Based Sports App</span>
                   <span className="lang-ar hidden">تطبيق رياضي قائم على المنتج</span>
@@ -1169,14 +1089,14 @@ export default function CoursePage() {
 
           {/* علي الايد - Delivery Service */}
           <motion.div
-            className="glass-strong rounded-3xl p-8 hover:glow transition-all duration-300"
+            className="glass-strong rounded-3xl p-6 md:p-8 hover:glow transition-all duration-300"
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.2, duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <div className="flex items-center gap-4 mb-6">
-              <div className="relative w-16 h-16 rounded-2xl overflow-hidden">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-6">
+              <div className="relative w-16 h-16 rounded-2xl overflow-hidden flex-shrink-0">
                 <Image
                   src="/images/IMG_3536.jpg"
                   alt="علي الايد Delivery"
@@ -1185,8 +1105,8 @@ export default function CoursePage() {
                   sizes="64px"
                 />
               </div>
-              <div>
-                <h4 className="text-2xl font-bold">علي الايد</h4>
+              <div className="flex-1">
+                <h4 className="text-xl md:text-2xl font-bold">علي الايد</h4>
                 <p className="text-sm text-orange-600 font-semibold">
                   <span className="lang-en">Motorcycle Delivery Service</span>
                   <span className="lang-ar hidden">خدمة توصيل بالدراجات النارية</span>
@@ -1243,17 +1163,17 @@ export default function CoursePage() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h4 className="text-2xl font-bold mb-6">
+          <h4 className="text-xl sm:text-2xl font-bold mb-6">
             <span className="lang-en">Partnership Benefits</span>
             <span className="lang-ar hidden">فوائد الشراكات</span>
           </h4>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="flex items-center gap-3">
-              <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3">
+              <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center flex-shrink-0">
                 <DollarSign className="w-6 h-6 text-white" />
               </div>
-              <div className="text-left">
+              <div className="text-left flex-1">
                 <h5 className="font-semibold">
                   <span className="lang-en">Earn While Learning</span>
                   <span className="lang-ar hidden">اكسب أثناء التعلم</span>
@@ -1265,11 +1185,11 @@ export default function CoursePage() {
               </div>
             </div>
 
-            <div className="flex items-center gap-3">
-              <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3">
+              <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center flex-shrink-0">
                 <Building className="w-6 h-6 text-white" />
               </div>
-              <div className="text-left">
+              <div className="text-left flex-1">
                 <h5 className="font-semibold">
                   <span className="lang-en">Industry Experience</span>
                   <span className="lang-ar hidden">خبرة في الصناعة</span>
@@ -1281,11 +1201,11 @@ export default function CoursePage() {
               </div>
             </div>
 
-            <div className="flex items-center gap-3">
-              <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-full flex items-center justify-center">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3">
+              <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-full flex items-center justify-center flex-shrink-0">
                 <Target className="w-6 h-6 text-white" />
               </div>
-              <div className="text-left">
+              <div className="text-left flex-1">
                 <h5 className="font-semibold">
                   <span className="lang-en">Portfolio Building</span>
                   <span className="lang-ar hidden">بناء المحفظة</span>
@@ -1312,17 +1232,17 @@ export default function CoursePage() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 text-white">
               <span className="lang-en">How We Work</span>
               <span className="lang-ar hidden">إزاي بنشتغل</span>
             </h2>
-            <p className="text-xl text-purple-100">
+            <p className="text-lg sm:text-xl text-purple-100">
               <span className="lang-en">The Full Development Cycle</span>
               <span className="lang-ar hidden">دورة التطوير الكاملة</span>
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-5 gap-6">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6">
             {learningCycle.map((step, index) => {
               const IconComponent = step.icon
               return (
@@ -1336,17 +1256,17 @@ export default function CoursePage() {
                   viewport={{ once: true }}
                 >
                   <motion.div
-                    className="w-20 h-20 bg-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-white/20 transition-all duration-300"
+                    className="w-16 h-16 sm:w-20 sm:h-20 bg-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-3 sm:mb-4 group-hover:bg-white/20 transition-all duration-300"
                     whileHover={{ scale: 1.1 }}
                   >
-                    <IconComponent className="w-8 h-8 text-white" />
+                    <IconComponent className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
                   </motion.div>
-                  <h3 className="font-semibold text-white mb-2">
+                  <h3 className="font-semibold text-white mb-2 text-sm sm:text-base text-center">
                     <span className="lang-en">{step.titleEn}</span>
                     <span className="lang-ar hidden">{step.titleAr}</span>
                   </h3>
                   {index < learningCycle.length - 1 && (
-                    <div className="hidden md:block absolute top-10 left-full w-full h-0.5 bg-white/20 transform -translate-y-1/2" />
+                    <div className="hidden lg:block absolute top-10 left-full w-full h-0.5 bg-white/20 transform -translate-y-1/2" />
                   )}
                 </motion.div>
               )
@@ -1360,7 +1280,7 @@ export default function CoursePage() {
         <div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-white to-purple-50 dark:from-gray-800 dark:via-gray-900 dark:to-purple-900/20" />
         
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
             {/* Prerequisites */}
             <motion.div
               initial={{ opacity: 0, x: -20 }}
@@ -1368,12 +1288,12 @@ export default function CoursePage() {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <div className="glass-strong rounded-2xl p-8">
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-xl flex items-center justify-center">
+              <div className="glass-strong rounded-2xl p-6 md:p-8">
+                <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-6">
+                  <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-xl flex items-center justify-center flex-shrink-0">
                     <Award className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold">
+                  <h3 className="text-xl md:text-2xl font-bold">
                     <span className="lang-en">What Do You Need to Start?</span>
                     <span className="lang-ar hidden">إيه اللي محتاجه عشان تبدأ؟</span>
                   </h3>
@@ -1426,12 +1346,12 @@ export default function CoursePage() {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <div className="glass-strong rounded-2xl p-8">
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-500 rounded-xl flex items-center justify-center">
+              <div className="glass-strong rounded-2xl p-6 md:p-8">
+                <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-6">
+                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-500 rounded-xl flex items-center justify-center flex-shrink-0">
                     <TrendingUp className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold">
+                  <h3 className="text-xl md:text-2xl font-bold">
                     <span className="lang-en">Course Outcomes & Benefits</span>
                     <span className="lang-ar hidden">نتائج ومميزات الكورس</span>
                   </h3>
@@ -1535,11 +1455,11 @@ export default function CoursePage() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 text-white">
               <span className="lang-en">Ready to Start Your Journey?</span>
               <span className="lang-ar hidden">مستعد تبدأ رحلتك؟</span>
             </h2>
-            <p className="text-xl text-purple-100 mb-8 max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg md:text-xl text-purple-100 mb-8 max-w-3xl mx-auto px-4">
               <span className="lang-en">
                 Join thousands of developers who transformed their careers with real-world Flutter development
               </span>
@@ -1552,13 +1472,13 @@ export default function CoursePage() {
               href="https://wa.me/201031559635?text=Hello! I want to enroll in the Flutter Mastery Course"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center px-12 py-6 bg-gradient-to-r from-green-500 via-emerald-500 to-green-600 text-white rounded-2xl font-bold text-2xl hover:shadow-2xl hover:shadow-green-500/50 transition-all duration-300 group"
+              className="inline-flex items-center px-8 sm:px-12 py-4 sm:py-6 bg-gradient-to-r from-green-500 via-emerald-500 to-green-600 text-white rounded-2xl font-bold text-lg sm:text-xl md:text-2xl hover:shadow-2xl hover:shadow-green-500/50 transition-all duration-300 group"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
               <span className="lang-en">Start Learning Now</span>
               <span className="lang-ar hidden">ابدأ التعلم دلوقتي</span>
-              <ArrowRight className="w-6 h-6 ml-3 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 ml-2 sm:ml-3 group-hover:translate-x-1 transition-transform" />
             </motion.a>
           </motion.div>
         </div>
